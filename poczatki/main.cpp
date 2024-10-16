@@ -46,10 +46,35 @@ void zad1b()
     else if (BMI>=30)
         cout<< "Twoj stan wagowy: otylosc" << endl;
 }
+void zad1c()
+{
+    int a;
+    cout<< "prosze podac liczbe"<<endl;
+    cin >> a;
+    if(a%2==0)
+        cout<<"liczba jest podzielna przez 2" << endl;
+    else
+        cout<< "liczba nie jest podzielna przez 2" <<endl;
+    if (a%3==0)
+        cout<< "liczba jest podzielna przez 3"<<endl;
+    else
+        cout << "liczba nie jest podzielna przez 3"<<endl;
+}
+
 int main()
 {
-   // zad1a();
+   //zad1a();
    //zad1b();
+   //zad1c();
+
+   for(int i=0; i < 3; i++){
+        for(int j=0; j < 5; j++){
+            cout << " i: " << i;
+            cout << " j: " << j;
+            cout << " | ";
+        }
+        cout << endl;
+   }
 
     return 0;
 }
