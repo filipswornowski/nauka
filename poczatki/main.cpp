@@ -104,14 +104,94 @@ void zad2c()
         else if(j == 0 || j == a-1)
             cout << "|";
         else if((i+j)%2 == 0)
-            cout << "*";
-        else
             cout << "#";
+        else
+            cout << "*";
             }
     cout << endl;
     }
 
 }
+void zad2d()
+{
+    int count = 0;
+    for(int i = 102; i <= 987; ++i)
+    {
+        int a = i/100;
+        int b = (i/10)%10;
+        int c = i%10;
+
+        if (a != b && b != c && a != c) {
+            std::cout << i << std::endl;
+            count++;
+        }
+    }
+cout << "laczna liczba: " << count << endl;
+}
+void zad2e()
+{
+    int szerokosc, wysokosc;
+
+    // Pobieranie danych od u¿ytkownika
+    cout << "Podaj szerokosc: ";
+    cin >> szerokosc;
+
+    cout << "Podaj wysokosc: ";
+    cin >> wysokosc;
+
+    for (int i = 0; i < wysokosc; i++) {
+        // Obliczanie liczby gwiazdek dla danej linii
+        int liczbaGwiazdek = szerokosc - (szerokosc - 1) * i / (wysokosc - 1);
+
+        // Wypisanie odpowiedniej liczby spacji na pocz¹tku ka¿dego wiersza
+        for (int j = 0; j < (szerokosc - liczbaGwiazdek) / 2; j++) {
+            cout << " ";
+        }
+        // Wypisanie gwiazdek
+        for (int j = 0; j < liczbaGwiazdek; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+void zad2f()
+{
+   int szer, wys;
+   cout <<"podaj szerokosc: " << endl;
+   cin >> szer;
+   cout << "podaj wysokosc: " << endl;
+   cin >> wys;
+
+        cout << "  |";
+        for(int i = 0; i < szer; i++){
+            cout<< "  " << i+1 << "  ";
+        }
+
+        cout<<"|"<<endl;
+
+        for(int i = 0; i < (5*szer + 4); i++){
+            cout<< "-";
+            }
+        cout << endl;
+
+
+    for(int i = 1; i <= wys; i++){
+            cout << i << " |";
+        for (int j = 1; j <= szer; j++)
+            {
+                if(i*j < 10)
+                    cout << "  " << i*j << "  ";
+                else
+                    cout << "  " << i*j << " ";
+            }
+            cout << "|" << endl;
+}
+for(int l = 0; l < (5*szer + 4); l++)
+            cout<< "-";
+
+
+}
+
 int main()
 {
     //zad1a();
@@ -119,26 +199,11 @@ int main()
     //zad1c();
     //zad2a();
     //zad2b();
-    zad2c();
+    //zad2c();
+    //zad2d();
+    //zad2e();//chat gpt :D
+    //zad2f();
 
 
-
-
-    /*
-    Podaj szerokosc:
-20
-Podaj wysokosc:
-10
---------------------
-|#*#*#*#*#*#*#*#*#*|
-|*#*#*#*#*#*#*#*#*#|
-|#*#*#*#*#*#*#*#*#*|
-|*#*#*#*#*#*#*#*#*#|
-|#*#*#*#*#*#*#*#*#*|
-|*#*#*#*#*#*#*#*#*#|
-|#*#*#*#*#*#*#*#*#*|
-|*#*#*#*#*#*#*#*#*#|
---------------------
-    */
     return 0;
 }
