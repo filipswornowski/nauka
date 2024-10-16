@@ -132,7 +132,7 @@ void zad2e()
 {
     int szerokosc, wysokosc;
 
-    // Pobieranie danych od u¿ytkownika
+    // Pobieranie danych od uÂ¿ytkownika
     cout << "Podaj szerokosc: ";
     cin >> szerokosc;
 
@@ -143,7 +143,7 @@ void zad2e()
         // Obliczanie liczby gwiazdek dla danej linii
         int liczbaGwiazdek = szerokosc - (szerokosc - 1) * i / (wysokosc - 1);
 
-        // Wypisanie odpowiedniej liczby spacji na pocz¹tku ka¿dego wiersza
+        // Wypisanie odpowiedniej liczby spacji na poczÂ¹tku kaÂ¿dego wiersza
         for (int j = 0; j < (szerokosc - liczbaGwiazdek) / 2; j++) {
             cout << " ";
         }
@@ -188,10 +188,7 @@ void zad2f()
 }
 for(int l = 0; l < (5*szer + 4); l++)
             cout<< "-";
-
-
 }
-
 int main()
 {
     //zad1a();
