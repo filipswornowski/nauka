@@ -60,21 +60,85 @@ void zad1c()
     else
         cout << "liczba nie jest podzielna przez 3"<<endl;
 }
+void zad2a()
+{
+    for(int i=1;i <= 10; i++){
+        for(int j=2; j<=10; j++){
+            cout<< i << "*" << j << "=" << i*j << endl;
+        }
+    cout << endl;
 
+    }
+}
+void zad2b()
+{
+    int a;
+    int b;
+    cout << "podaj szerokosc: " << endl;
+    cin >> a;
+    cout << "podaj wysokosc: " << endl;
+    cin >> b;
+    for(int i = 0; i < b; i++){
+            for(int j = 0; j < a; j++){
+        if(i == 0 || i == b - 1 || j == 0 || j == a - 1)
+            cout << "*";
+        else
+            cout << " ";
+            }
+    cout << endl;
+    }
+
+}
+void zad2c()
+{
+    int a;
+    int b;
+    cout << "podaj szerokosc: " << endl;
+    cin >> a;
+    cout << "podaj wysokosc: " << endl;
+    cin >> b;
+    for(int i = 0; i < b; i++){
+            for(int j = 0; j < a; j++){
+        if(i == 0 || i == b - 1)
+            cout << "-";
+        else if(j == 0 || j == a-1)
+            cout << "|";
+        else if((i+j)%2 == 0)
+            cout << "*";
+        else
+            cout << "#";
+            }
+    cout << endl;
+    }
+
+}
 int main()
 {
-   //zad1a();
-   //zad1b();
-   //zad1c();
+    //zad1a();
+    //zad1b();
+    //zad1c();
+    //zad2a();
+    //zad2b();
+    zad2c();
 
-   for(int i=0; i < 3; i++){
-        for(int j=0; j < 5; j++){
-            cout << " i: " << i;
-            cout << " j: " << j;
-            cout << " | ";
-        }
-        cout << endl;
-   }
 
+
+
+    /*
+    Podaj szerokosc:
+20
+Podaj wysokosc:
+10
+--------------------
+|#*#*#*#*#*#*#*#*#*|
+|*#*#*#*#*#*#*#*#*#|
+|#*#*#*#*#*#*#*#*#*|
+|*#*#*#*#*#*#*#*#*#|
+|#*#*#*#*#*#*#*#*#*|
+|*#*#*#*#*#*#*#*#*#|
+|#*#*#*#*#*#*#*#*#*|
+|*#*#*#*#*#*#*#*#*#|
+--------------------
+    */
     return 0;
 }
