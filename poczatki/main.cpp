@@ -237,11 +237,100 @@ void zad4b()
     cin >> t;
   }
   while(t!= 4);
+  cout << "zgadles!" << endl;
+}
+void zad5a()
+{
+    int a, b, c;
+    cout << "podaj pierwsza liczbe: " << endl;
+    cin >> a;
+    cout << "podaj druga liczbe: " << endl;
+    cin >> b;
+    cout << "wybierz rodzaj działania: " << endl << "1. - dodawanie" << endl << "2. - odejmowanie" << endl << "3. - mnozenie" << endl << "4. - dzielenie" << endl;
+    cin >> c;
 
+    switch(c)
+    {
+    default:
+        cout << "prosze wybrac liczbe od 1 do 4" << endl;
+        cin >> c;
+    case 1:
+        cout << "wynik to: " << a + b << endl;
+        break;
+    case 2:
+        cout << "wynik to: " << a - b << endl;
+        break;
+    case 3:
+        cout << "wynik to: " << a * b << endl;
+        break;
+    case 4:
+        cout << "wynik to: " << a / b << endl;
+    }
 
 
 }
+void zad6a()
+{
+    int tab[5];
+    cout << "podaj liczby: " << endl;
+    for(int i = 0; i < 5; i++)
+    {
+        cin >> tab[i];
+    }
+    cout << "liczby parzyste: " << endl;
+    for(int i = 0; i < 5; i++)
+    {
+        if(tab[i]%2 == 0)
+            cout << tab[i] << endl;
+    }
+}
 
+void zad6b(){
+int tab[5];
+    cout << "podaj liczby: " << endl;
+    for(int i = 0; i < 5; i++)
+    {
+        cin >> tab[i];
+    }
+    for(int i = 0; i < 5; i++)
+    {
+        cout << tab[4-i] << endl;
+    }
+}
+
+void zad6c()
+{
+int tab[5];
+    cout << "podaj liczby: " << endl;
+    for(int i = 0; i < 5; i++)
+    {
+        cin >> tab[i];
+    }
+    for(int i = 0; i < 5; i++)
+    {
+        if(tab[i] < 0)
+            {
+                tab[i] = 0;
+                cout << tab[i] << endl;
+            }
+        else cout << tab[i] << endl;
+    }
+}
+void zad6d()
+{
+    int c = 1;
+    int tab[3][5];
+    for(int i = 0; i < 3; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+            tab[i][j] = c;
+            cout << tab[i][j] << " ";
+            c++;
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
@@ -257,6 +346,11 @@ int main()
     //zad3a();
     //zad3b();
     //zad4a();
-    zad4b();
+    //zad4b();
+    //zad5a();
+    //zad6a();
+    //zad6b();
+    //zad6c();
+    zad6d();
     return 0;
 }
