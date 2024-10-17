@@ -189,6 +189,60 @@ void zad2f()
 for(int l = 0; l < (5*szer + 4); l++)
             cout<< "-";
 }
+void zad3a()
+{
+    int N;
+    int parzysta = 2;
+    cout << "podaj liczbe N: " << endl;
+    cin >> N;
+    while(parzysta <= N)
+    {
+            cout << parzysta << endl;
+        parzysta = (parzysta + 2);
+    }
+}
+void zad3b(){
+    int N;
+    int suma = 0;
+    int licz = 1;
+    cout << "podaj liczbe N: " << endl;
+    cin >> N;
+    while(N > 0)
+    {
+            suma = (suma + licz);
+            N--;
+            licz++;
+    }
+    cout << suma << endl;
+}
+
+void zad4a()
+{
+    int ile;
+    cout << "podaj liczbe: " << endl;
+    cin >> ile;
+    int t = ile + 1;
+    do{
+        cout << "Napis numer: " << t - ile<< endl;
+        ile--;
+    }
+    while(ile>0);
+
+}
+void zad4b()
+{
+  int t;
+  do{
+    cout << "zgadnij liczbe!" << endl;
+    cin >> t;
+  }
+  while(t!= 4);
+
+
+
+}
+
+
 int main()
 {
     //zad1a();
@@ -200,7 +254,9 @@ int main()
     //zad2d();
     //zad2e();//chat gpt :D
     //zad2f();
-
-
+    //zad3a();
+    //zad3b();
+    //zad4a();
+    zad4b();
     return 0;
 }
