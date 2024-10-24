@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -331,7 +332,36 @@ void zad6d()
         cout << endl;
     }
 }
-
+void zad7a()
+{
+    char tab[100];
+    cout << "podaj dane osobowe: " << endl;
+    cin.getline(tab, 100);
+    int spacja;
+    int koniec;
+    for(int i = 0; i < strlen(tab); i++)
+    {
+        if(tab[i] == ' '){
+            spacja = i;
+        }
+    }
+    koniec = strlen(tab);
+    cout << "dane osobowe: " << tab << endl;
+    cout << "pozycja spacji: " << spacja << endl;
+    cout << "pozycja konca: " << koniec << endl;
+}
+void zad7b()
+{
+    char tab[200];
+    cout << "podaj tekst do 200 znakow: " << endl;
+    cin.getline(tab, 200);
+    for(int i = 0; i < strlen(tab); i++){
+        if(tab[i] == ' ' || tab[i] == '.'){
+            tab[i] = '-';
+        }
+    }
+    cout << tab << endl;
+}
 int main()
 {
     //zad1a();
@@ -351,6 +381,9 @@ int main()
     //zad6a();
     //zad6b();
     //zad6c();
-    zad6d();
+    //zad6d();
+    //zad7a();
+    zad7b();
+
     return 0;
 }
