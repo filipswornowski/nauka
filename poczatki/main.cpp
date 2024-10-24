@@ -384,6 +384,6 @@ int main()
     //zad6d();
     //zad7a();
     zad7b();
-
+//aaaaaaaaaaaaaaaaaaaaaaaaaa
     return 0;
 }
